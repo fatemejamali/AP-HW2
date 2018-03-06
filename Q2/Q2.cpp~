@@ -1,0 +1,74 @@
+#include<iostream>
+#include<fstream>
+
+
+int main()
+{
+  int k{};
+  std:: string line{};
+  std::ifstream ifile{"Error_find.txt"};
+  while (!ifile.eof())
+     {
+       getline(ifile , line);      
+       for(unsigned int i{} ; i<line.length() ; i++)
+         {
+	   if(!isupper(line[i]))
+	    {
+	        switch(line[i])
+	        {
+		   case 'a':
+		     k=0;
+		   break;
+		   case 'e':
+		     k=0;
+		   break;
+		   case 'i':
+		     k=0;
+		   break;
+		   case 'u':
+		     k=0;  
+		   break;
+		   case 'o':
+		     k=0;
+		   break;
+		   case ')':
+		     k=0;
+		   break;
+		   case '(':
+		     k=0;
+		   break;
+		   case '.':
+		     k=0;
+		   case ' ':
+		     k=0;
+		   break;
+		   case '-':
+		     k=0;
+		   default :
+		     k++;
+		   break;
+	         }
+	    }
+	   
+
+
+
+	    if(k>=5 && (line[i+1]==' '||line[i+1]=='.'))
+	       {
+	         while(k>0)
+		  {
+	            std::cout<<line[i-k+1];
+	            k--;
+	          }
+	         std::cout<<std::endl; 
+                 k=0;
+	       }
+	    
+	 }
+        
+     }
+  
+  ifile.close();
+  return 0;
+}
+

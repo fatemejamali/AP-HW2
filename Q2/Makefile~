@@ -1,0 +1,13 @@
+CXX = g++
+CXXFLAGS = -std=c++14 -Wall -c
+LXXFLAGS = -std=c++14
+OBJECTS = q2hw2.o
+TARGET = q2hw2
+
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $(LXXFLAGS) $(OBJECTS) -o $(TARGET)
+q2hw2.o: q2hw2.cpp
+	$(CXX) $(CXXFLAGS) q2hw2.cpp
+clean:
+	rm -f $(TARGET) $(OBJECTS)
