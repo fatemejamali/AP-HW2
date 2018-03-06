@@ -1,0 +1,21 @@
+#include<iostream>
+
+
+
+int main()
+{
+  double A[n]{};
+  double a;
+  std::cin>>"please enter a number">>std::endl;
+  std::cin>>a;
+  while(a==0)
+    {
+      std::cin>>"please enter your numbers">>std::endl;
+ cin>>A[n]
+    }
+
+
+
+
+
+}
